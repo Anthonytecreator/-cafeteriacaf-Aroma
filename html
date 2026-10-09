@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Aroma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+             <img src="https://imgs.search.brave.com/ET6XET37S40IBAYu8JeLZBnN8ZemMoRXnuFwPZqLawo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTMv/MDc3LzA4Mi9zbWFs/bC9jb2ZmZWUtc2hv/cC1sb2dvLWRlc2ln/bi10ZW1wbGF0ZS1z/dGFtcC1sb2dvLWRl/c2lnbi1pbGx1c3Ry/YXRpb24tZnJlZS12/ZWN0b3IuanBn" alt="Logo do Café Aroma" onerror="this.style.display='none'">
+            <div class="logo-texto">
+                <h1>Café Aroma</h1>
+                <p>Sabor que faz parte do seu dia</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="introducao">
+            <div class="texto-introducao">
+                <h2>Bem-vindo ao Café Aroma!</h2>
+
+                <p>
+                 Aqui você encontra bolos caseiros e artesanais feitos com muito carinho para deixar seus momentos ainda mais especiais.
+                </p>
+
+                <p>
+                    Nosso objetivo é oferecer produtos de qualidade, atendimento acolhedor e uma experiência agradável para todos os nossos clientes.
+                </p>
+
+                <a href="#cardapio" class="botao">
+                    Conheça nosso cardápio
+                </a>
+            </div>
+
+            <div class="imagem-introducao">
+                <img src="https://imgs.search.brave.com/4t2lfy2lzLkjfWGge38Wf-mmRLY5EsTjIUeGVVcKRLU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2I0L2Q0/LzliL2I0ZDQ5YjQ2/MmQ1NzM0NjM3MDU3/NjcxNGQwZjFmMzNh/LmpwZw" alt="Xícara de café servida no Café Aroma">
+            </div>
+        </section>
+
+        <!-- ===== SOBRE NÓS (seção reorganizada) ===== -->
+        <section id="sobre">
+            <div class="sobre-conteudo">
+
+                <div class="sobre-texto">
+                    <h2>Sobre nós</h2>
+
+                    <p class="destaque">
+                        O Café Aroma é uma padaria e confeitaria em Montes Claros – MG, especializada em bolos caseiros, bolos personalizados e doces para todas as ocasiões.
+                    </p>
+
+                    <p>
+                        Trabalhamos com ingredientes selecionados e preparamos tudo com muito carinho, para que cada produto chegue à sua mesa com sabor de casa.
+                    </p>
+
+                    <ul class="ocasioes">
+                        <li>Aniversários</li>
+                        <li>Festas</li>
+                        <li>Casamentos</li>
+                        <li>Confraternizações</li>
+                        <li>Café da tarde</li>
+                    </ul>
+                </div>
+
+                <aside class="sobre-info">
+                    <div class="info-item">
+                        <span class="info-icone" aria-hidden="true">📍</span>
+                        <div>
+                            <h3>Localização</h3>
+                            <p>Rua das Flores, 250 – Centro<br>Montes Claros – MG</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icone" aria-hidden="true">🕒</span>
+                        <div>
+                            <h3>Horário</h3>
+                            <p>Segunda a sábado, das 08h às 18h</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icone" aria-hidden="true">📞</span>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(38) 6767-7776</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icone" aria-hidden="true">📱</span>
+                        <div>
+                            <h3>Pedidos</h3>
+                            <p>WhatsApp e atendimento presencial</p>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+        <section id="cardapio">
+            <h2>Nosso Cardápio</h2>
+
+            <div class="busca">
+                <input type="search" id="busca-input" placeholder="Buscar no cardápio (ex: cappuccino, brownie)"
+                    autocomplete="off" aria-label="Buscar item no cardápio">
+                <ul id="busca-sugestoes" class="busca-sugestoes" hidden></ul>
+                <p id="busca-aviso" class="busca-aviso" hidden>Nenhum item encontrado. Tente outro nome.</p>
+            </div>
+
+            <div class="categoria-bloco">
+                <h3 class="titulo-categoria">☕ Cafés Quentes</h3>
+                <div class="carrossel-container">
+                    <button class="btn-seta seta-esquerda" onclick="scrollFileira(this, -1)">&#10094;</button>
+                    <div class="cards-carrossel">
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/N8ag_BM5LNoJWT2se7sKt0hsKIXXmA2uJEYXJIpMQGo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTU0/MDg5NzI0OS9wdC9m/b3RvL2NvZmZlZS1t/YWNoaW5lLXBvdXJp/bmctb3V0LWVzcHJl/c3NvLXNob3QuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPXJF/aTBrcE1lcjMtV2lY/ZDF3d2plN3ZYZUda/WmFOTGdBQ29xaXJz/d0VZVUk9" alt="Café Expresso">
+                            <h3>Café Expresso</h3>
+                            <p>Café preparado na hora, com sabor intenso e aroma marcante.</p>
+                            <span class="preco">R$ 6,00</span>
+                        </article>
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/JF9MfBHFHhqFrnXaEyiP8I9ZxTr24PiJV4nrsqYWifk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ndWlh/ZG9lc3R1ZGFudGUu/YWJyaWwuY29tLmJy/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9zaXRl/cy80LzIwMjUvMDcv/Y2FwcHVjY2luby5q/cGc_cXVhbGl0eT03/MCZ3PTEwMjQ" alt="Cappuccino">
+                            <h3>Cappuccino</h3>
+                            <p>Uma combinação cremosa de café, leite e espuma de leite.</p>
+                            <span class="preco">R$ 10,00</span>
+                        </article>
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/zU1s3MlkrgqtOdJ7M9VN90OWddTwmIFCEybqvYQQYtg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ibG9n/LmNvZmZlZW1haXMu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDI2LzA5L2NhZmUt/cXVlbnRlLWNhZmUt/Z2VsYWRvLTEwMjR4/NjgzLmpwZw" alt="Café Coado Especial">
+                            <h3>Café Coado Especial</h3>
+                            <p>Grãos selecionados da região, coado na hora na mesa.</p>
+                            <span class="preco">R$ 8,00</span>
+                        </article>
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/SEu4POCsXithrPR5OnYIldxtCY92GE_Nh8cGJ8wgEeo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA0LzAwLzg0LzAx/LzM2MF9GXzQwMDg0/MDExM19Za3l4Y254/dnJuQkl3NzlqVjE1/UU1LMkVWQlhGR2dn/ZS5qcGc" alt="Mocaccino">
+                            <h3>Mocaccino</h3>
+                            <p>Espresso com calda cremosa de chocolate e leite vaporizado.</p>
+                            <span class="preco">R$ 12,00</span>
+                        </article>
+                    </div>
+                    <button class="btn-seta seta-direita" onclick="scrollFileira(this, 1)">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="categoria-bloco">
+                <h3 class="titulo-categoria">🧋 Bebidas Geladas</h3>
+                <div class="carrossel-container">
+                    <button class="btn-seta seta-esquerda" onclick="scrollFileira(this, -1)">&#10094;</button>
+                    <div class="cards-carrossel">
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/u_JI9MISe2GG8S6Ux69PGKSLBtuoKcowHS4AaXMRHbk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3RpL2ZvdG9z/LWdyYXRpcy90Mi80/NjEyMzkyNS1yZWZy/ZXNjYW50ZS12aWRy/by1kby10YWlsYW5k/ZXMtZ2VsYWRvLWNo/YS1jb20tZ2Vsby1j/dWJvcy1lbS11bWEt/Y2FmZXRlcmlhLW1l/c2EtY29uanVudG8t/Y29udHJhLXVtYS1l/eHViZXJhbnRlLWph/cmRpbS1wYW5vLWRl/LWZ1bmRvLWNsYXNz/aWNvLXRhaWxhbmRl/cy1iZWJpZGEtY29u/Y2VpdG8tZG8tdmVy/YW8tYmViaWRhcy1y/ZWxheGFtZW50by10/cm9waWNhbC1hdG1v/c2ZlcmEtYXNpYS1j/dWxpbmFyaWEtZm90/by5qcGVn" alt="Iced Coffee">
+                            <h3>Iced Coffee</h3>
+                            <p>Café gelado refrescante servido com pedras de gelo e leite.</p>
+                            <span class="preco">R$ 11,00</span>
+                        </article>
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/Q1NIai4CYe0SS8ozofz_yCyBj7sGV5Ll0LaFRIP9yvM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyNS8w/Ny8yMy8xNC8xNi9h/aS1nZW5lcmF0ZWQt/OTczMDYwOF82NDAu/cG5n" alt="Frappuccino">
+                            <h3>Frappuccino Doce de Leite</h3>
+                            <p>Bebida batida com gelo, café, doce de leite e chantilly.</p>
+                            <span class="preco">R$ 15,00</span>
+                        </article>
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/M-oz2hAJ2g2oxG1mAMp-owGB9QJFW8DJuMWOvYfxxgM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3RpL2ZvdG9z/LWdyYXRpcy90Mi82/NjMzNTM4Mi11bWEt/YmViZXItZGVudHJv/LXVtYS1jb3BvLWZv/dG8uanBn" alt="Soda Italiana">
+                            <h3>Soda Italiana Frutas Vermelhas</h3>
+                            <p>Bebida gaseificada super refrescante com xarope de frutas.</p>
+                            <span class="preco">R$ 12,00</span>
+                        </article>
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/lN3HxxoKaRoqAvaXZ4_QfXtrLg2U-_Ve9D9vlx6PeP4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZvdG9zLXByZW1p/dW0vYmViaWRhLXRy/b3BpY2FsLWNvbG9y/aWRhLWUteGljYXJh/LWRlLWNhZmUtYWNv/bmNoZWdhbnRlLWVt/LXVtYS1tZXNhLWVt/LXVtLWFtYmllbnRl/LWRlLWNhZmUtY29u/dmlkYXRpdm9fMTUy/Nzg4OC05NC5qcGc_/c2VtdD1haXNfaHli/cmlkJnc9NzQwJnE9/ODA" alt="Suco Natural">
+                            <h3>Suco de Laranja Natural</h3>
+                            <p>Suco 100% natural, espremido na hora sem adição de água.</p>
+                            <span class="preco">R$ 9,00</span>
+                        </article>
+                    </div>
+                    <button class="btn-seta seta-direita" onclick="scrollFileira(this, 1)">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="categoria-bloco">
+                <h3 class="titulo-categoria">🍰 Bolos & Doces</h3>
+                <div class="carrossel-container">
+                    <button class="btn-seta seta-esquerda" onclick="scrollFileira(this, -1)">&#10094;</button>
+                    <div class="cards-carrossel">
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/ad-j2UZpzqnD4V2DMTk2S4TWloYjvjdEf-SeY8BkVJ4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS9ib2xvLWRlLWNl/bm91cmEtY29tLWNv/YmVydHVyYS1kZS1j/aG9jb2xhdGUtYWNv/bXBhbmhhZG8tZGUt/dW1hLXhpY2FyYS1k/ZS1jYWZlXzI4NTg4/NS0yMjQuanBnP3Nl/bXQ9YWlzX2h5YnJp/ZA" alt="Bolo Caseiro">
+                            <h3>Bolo de Cenoura com Chocolate</h3>
+                            <p>Massa fofinha com uma generosa cobertura de brigadeiro.</p>
+                            <span class="preco">R$ 8,50 / fatia</span>
+                        </article>
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/yuAsjxW1BVtbw5085dJoa7jdkX7z6o5ikZVIMG8-4mQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZWNl/aXRhc2RlcGVzb3Mu/Y29tLmJyL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDI2LzA1L0dl/bWluaV9ib2xvLWRl/LWZ1YmEtY29tLWdv/aWFiYWRhLnBuZw" alt="Bolo de Fubá">
+                            <h3>Bolo de Fubá com Goiabada</h3>
+                            <p>O clássico bolo da vovó quentinho com pedaços de goiabada.</p>
+                            <span class="preco">R$ 7,50 / fatia</span>
+                        </article>
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/KzYqNUEIDI4B_9N9z6_0FVg0nEmppgFWKqmFA1gCCog/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZvdG9zLWdyYXRp/cy91bWEtZmF0aWEt/ZGUtYnJvd25pZS1k/ZS1jaG9jb2xhdGUt/Y29tLXNvcnZldGUt/ZGUtbm96LWUtYmF1/bmlsaGFfMTE0NTc5/LTkwMy5qcGc_c2Vt/dD1haXNfaHlicmlk/Jnc9NzQwJnE9ODA" alt="Brownie">
+                            <h3>Brownie com Sorvete</h3>
+                            <p>Brownie de chocolate meio amargo com bola de sorvete de creme.</p>
+                            <span class="preco">R$ 16,00</span>
+                        </article>
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/n0DrDA5MBHYvNyB0xgjYaDO7mNuVSL5WN6PmIRekFIY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3RpL2ZvdG9z/LWdyYXRpcy90Mi81/NDM2MDcwOC1kZWxp/Y2lvc28tbGltYW8t/bWVyZW5ndWUtdG9y/dGEtZmF0aWEtZ3Jh/dGlzLWZvdG8uanBn" alt="Torta de Limão">
+                            <h3>Torta de Limão</h3>
+                            <p>Massa crocante com creme de limão e cobertura de merengue.</p>
+                            <span class="preco">R$ 11,00 / fatia</span>
+                        </article>
+                    </div>
+                    <button class="btn-seta seta-direita" onclick="scrollFileira(this, 1)">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="categoria-bloco">
+                <h3 class="titulo-categoria">🥐 Salgados</h3>
+                <div class="carrossel-container">
+                    <button class="btn-seta seta-esquerda" onclick="scrollFileira(this, -1)">&#10094;</button>
+                    <div class="cards-carrossel">
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/lkRc7txtauJM8FdzBpE-Egmxjl4eyP16PaM9DsNEah0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mLmku/dW9sLmNvbS5ici9m/b3RvZ3JhZmlhLzIw/MjQvMDgvMTYvMTcy/Mzg0MTg0OTY2YmZi/ZDM5YzFkMDdfMTcy/Mzg0MTg0OV8zeDJf/bWQuanBn" alt="Pão de Queijo">
+                            <h3>Pão de Queijo Recheado</h3>
+                            <p>Tradicional pão de queijo mineiro recheado com requeijão.</p>
+                            <span class="preco">R$ 6,50</span>
+                        </article>
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/BQkUUZPUbG8T4eAMZoV5B-V_88G_ORizF8WrQLTY_ug/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L2ZvdG9zLXByZW1p/dW0vY3JvaXNzYW50/LWNvbS1wcmVzdW50/by1lLXF1ZWlqby1h/LWJvcmRvLXhpY2Fy/YS1kZS1jYWZlLWZ1/bmRvLXByZXRvLXZp/c3RhLWRvLXRvcG9f/Mjk2NTg2LTUwMTku/anBnP3NlbXQ9YWlz/X2h5YnJpZCZ3PTc0/MCZxPTgw" alt="Croissant">
+                            <h3>Croissant de Presunto e Queijo</h3>
+                            <p>Massa folhada artesanal bem amanteigada e crocante.</p>
+                            <span class="preco">R$ 12,00</span>
+                        </article>
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/giKkx0gY0leKBw9pHG7lnpy15FOw-qb8_hg0lVRjoiE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLm1l/dHJvaW1nLmNvbS9F/TXU3bEJnanQ3d0JY/c0V5OWVycURra0xL/OTI3c0UyOE4wTVlM/RE5SMkxNL3c6OTAw/L3E6ODUvZjp3ZWJw/L3BsYWluL2h0dHBz/Oi8vaW1hZ2VzLm1l/dHJvaW1nLmNvbS8y/MDI2LzAzL2VtcGFk/YW8tZGUtZnJhbmdv/LTEucG5n" alt="Empada">
+                            <h3>Empada de Frango com Catupiry</h3>
+                            <p>Massa podre derretendo na boca com recheio bem temperado.</p>
+                            <span class="preco">R$ 8,00</span>
+                        </article>
+                        <article class="card">
+                            <img src="https://imgs.search.brave.com/XQxqVgEnW3g8ID2tzyxEBlslAS-vUP0AMk__6kS3P9k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudGNkbi5jb20u/YnIvaW1nL2ltZ19w/cm9kLzEyOTczODMv/OTBfa2l0X2NhZmVf/ZnJpZ2lkZWlyaW5o/YV9vdm9fdG9zdGV4/XzJfcGVjYXNfZmVy/cm9fZnVuZGlkb18x/MzUwXzJfN2RmNmMy/ZTc3Yjg5NzBlOTU1/OTgwZjhiOThhMGRj/ZWYuanBn" alt="Tostex">
+                            <h3>Tostex Especial da Casa</h3>
+                            <p>Pão de forma artesanal, queijo prato, presunto e tomate picado.</p>
+                            <span class="preco">R$ 10,00</span>
+                        </article>
+                    </div>
+                    <button class="btn-seta seta-direita" onclick="scrollFileira(this, 1)">&#10095;</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contato">
+            <h2>Entre em contato</h2>
+
+            <p>
+                Ficou com vontade de conhecer o Café Aroma?
+                Entre em contato conosco!
+            </p>
+
+            <a href="https://wa.me/5538999999999" target="_blank" class="botao">
+                Fale conosco pelo WhatsApp
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Café Aroma - Todos os direitos reservados.</p>
+        <p>Telefone: (38) 99999-9999 | Montes Claros - MG</p>
+    </footer>
+
+    <script>
+        function scrollFileira(botao, direcao) {
+            const carrosselContainer = botao.parentElement;
+            const carrossel = carrosselContainer.querySelector('.cards-carrossel');
+            const larguraCard = carrossel.querySelector('.card').offsetWidth + 25;
+            carrossel.scrollBy({
+                left: direcao * larguraCard,
+                behavior: 'smooth'
+            });
+        }
+
+        /* ===== BUSCA NO CARDÁPIO ===== */
+        const buscaInput = document.getElementById('busca-input');
+        const listaSugestoes = document.getElementById('busca-sugestoes');
+        const avisoBusca = document.getElementById('busca-aviso');
+        const todosCards = Array.from(document.querySelectorAll('#cardapio .card'));
+
+        // Ignora acentos e maiúsculas (ex: "pao" encontra "Pão")
+        const normalizar = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+
+        function buscar(termo) {
+            const q = normalizar(termo);
+            if (!q) return [];
+            return todosCards.filter(card =>
+                normalizar(card.querySelector('h3').textContent).includes(q) ||
+                normalizar(card.querySelector('p').textContent).includes(q)
+            );
+        }
+
+        function irParaCard(card) {
+            const carrossel = card.closest('.cards-carrossel');
+            carrossel.scrollTo({ left: card.offsetLeft - carrossel.offsetLeft - 5, behavior: 'smooth' });
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            todosCards.forEach(c => c.classList.remove('card-encontrado'));
+            card.classList.add('card-encontrado');
+            setTimeout(() => card.classList.remove('card-encontrado'), 3000);
+
+            listaSugestoes.hidden = true;
+            avisoBusca.hidden = true;
+            buscaInput.value = card.querySelector('h3').textContent;
+        }
+
+        buscaInput.addEventListener('input', () => {
+            const resultados = buscar(buscaInput.value);
+            listaSugestoes.innerHTML = '';
+            avisoBusca.hidden = !(buscaInput.value.trim() && resultados.length === 0);
+            listaSugestoes.hidden = resultados.length === 0;
+
+            resultados.slice(0, 6).forEach(card => {
+                const categoria = card.closest('.categoria-bloco').querySelector('.titulo-categoria').textContent;
+                const li = document.createElement('li');
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.innerHTML = '<span></span><small></small>';
+                btn.children[0].textContent = card.querySelector('h3').textContent;
+                btn.children[1].textContent = categoria;
+                btn.addEventListener('click', () => irParaCard(card));
+                li.appendChild(btn);
+                listaSugestoes.appendChild(li);
+            });
+        });
+
+        buscaInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const resultados = buscar(buscaInput.value);
+                if (resultados.length) irParaCard(resultados[0]);
+            }
+            if (e.key === 'Escape') listaSugestoes.hidden = true;
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.busca')) listaSugestoes.hidden = true;
+        });
+    </script>
+
+</body>
+
+</html>
